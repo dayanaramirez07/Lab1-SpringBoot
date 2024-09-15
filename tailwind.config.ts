@@ -9,8 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#4e42e2",
+        secundary: "#dde2f8",
+      },
+      screens: {
+        "md-custom": "950px",
       },
     },
   },

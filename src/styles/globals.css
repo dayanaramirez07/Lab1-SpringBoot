@@ -2,26 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.bg-color {
+  @apply bg-gradient-to-br from-[#33D35E] to-[#2AB6D9];
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+input[type="date"] {
+  position: relative;
+  z-index: 10;
+  background: transparent;
+  appearance: none;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
